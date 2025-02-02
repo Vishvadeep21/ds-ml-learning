@@ -5,3 +5,5 @@ import userexample
 print(userexample.pi)
 
 print(userexample.cube(3))
+
+print(userexample.area(2))
