@@ -12,4 +12,4 @@ with open(path,"w") as file:
         writer.writerow(i)
         # writerow() is used to add single line in csv files
         # to seprate each row
-    print("FILE WAS CREATED SUCCESSFULLY")
+    print(f"FILE '{path}' WAS CREATED SUCCESSFULLY")
