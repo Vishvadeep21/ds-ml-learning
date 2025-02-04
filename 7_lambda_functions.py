@@ -1,5 +1,5 @@
 # Usefull to create the small functions in a single line
-# Also for creating function under the function
+# Also for creating function inside the function
 double=lambda x: x*x
 # print(double(2))
 cube=lambda x: x**3
