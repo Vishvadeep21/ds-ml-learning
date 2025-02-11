@@ -3,10 +3,9 @@ capitals = {"USA": "Washington D.C.",
                     "China": "Beijing",
                     "Russia": "Moscow"}
 
-print(dir(capitals))
-print(help(capitals))
+print(capitals)
 print(capitals.get("Japan"))
-# returns the values of the key given within the functi00on
+# returns the values of the key given within the function
 
 if capitals.get("Russia"):
   print("That capital exists")
