@@ -12,7 +12,7 @@ if capitals.get("Russia"):
 else:
   print("That capital doesn't exist")
 
-capitals.update({"Germany": "Berlin"})
+capitals.update({"Germany": "Berlin"})  
 capitals.update({"USA": "Detroit"})
 # adds the new value to the existing dictionaries
 
