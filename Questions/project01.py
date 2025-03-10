@@ -17,7 +17,8 @@ while True:
         else:
             contracts[k]=v
             print("contracts updated succesfully!!!")
-            print(contracts)
+            for key,value in contracts.items():
+                print(f"{key}=>{value}")
     elif user==3:
         r=input("enter the contract you want to remove: ")
         if r not in contracts:
@@ -25,9 +26,10 @@ while True:
         else:
             del contracts[r]
             print("Contract removed successfully!!!")
-        print(contracts)
+        for key,value in contracts.items():
+            print(f"{key},{value}")
     elif user==4:
-        q=input("Enter the contract in which you want query")
+        q=input("Enter the contract in which you want query: ")
         if q not in contracts:
             print("contract doesn't exist!!!")
         else:
