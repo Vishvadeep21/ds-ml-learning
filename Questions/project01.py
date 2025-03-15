@@ -1,38 +1,50 @@
-contracts={'vishvadeep':9389534860,'Sayyed Hussain':1365468210,'Dev':3288789512,'Prajwal':2122154800}
+contacts={'vishvadeep':9389534860,'Sayyed Hussain':1365468210,'Dev':3288789512,'Prajwal':2122154800}
 while True:
     user=int(input('''enter your choice
 1.print
 2.add
 3.remove
-4.query:- '''))
-    if user==1:
-        for key,value in contracts.items():
+4.query
+5.end:- '''))
+    
+    def prt():
+        for key,value in contacts.items():
             print(f"{key}=>{value}")
     
-    elif user==2:
-        k=input("enter the name for new contract: ")
-        v=int(input("enter the phone number for new contract: "))
-        if k in contracts:
-            print("contract already exists!!!")
+    def add():
+        k=input("enter the name for new contact: ")
+        v=int(input("enter the phone number for new contact: "))
+        if k in contacts:
+            print("contact already exists!!!")
         else:
-            contracts[k]=v
-            print("contracts updated succesfully!!!")
-            for key,value in contracts.items():
+            contacts[k]=v
+            print("contacts updated succesfully!!!")
+            for key,value in contacts.items():
                 print(f"{key}=>{value}")
-    elif user==3:
-        r=input("enter the contract you want to remove: ")
-        if r not in contracts:
-            print("contract doesn't exist!!!")
+    def  remove():
+        r=input("enter the contact you want to remove: ")
+        if r not in contacts:
+            print("contact doesn't exist!!!")
         else:
-            del contracts[r]
+            del contacts[r]
             print("Contract removed successfully!!!")
-        for key,value in contracts.items():
+        for key,value in contacts.items():
             print(f"{key},{value}")
-    elif user==4:
+    def query():
         q=input("Enter the contract in which you want query: ")
-        if q not in contracts:
-            print("contract doesn't exist!!!")
+        if q not in contacts:
+            print("contact doesn't exist!!!")
         else:
-            print(f"{q}=>{contracts[q]}") 
-    else:
-        break
+            print(f"{q}=>{contacts[q]}") 
+
+    match user:
+        case 1:
+            prt()
+        case 2:
+            add()
+        case 3:
+            remove()
+        case 4:
+            query()
+        case 5:
+            break

@@ -1,4 +1,5 @@
 import numpy as np
 
-a=np.arange(30).reshape(2,15)
-print(np.split(a,2))
+a=np.arange(30).reshape(3,10)
+print(np.hsplit(a,2))
+print(np.vsplit(a,1))
