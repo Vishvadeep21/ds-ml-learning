@@ -21,6 +21,7 @@ while True:
             print("contacts updated succesfully!!!")
             for key,value in contacts.items():
                 print(f"{key}=>{value}")
+   
     def  remove():
         r=input("enter the contact you want to remove: ")
         if r not in contacts:
@@ -30,6 +31,7 @@ while True:
             print("Contract removed successfully!!!")
         for key,value in contacts.items():
             print(f"{key},{value}")
+   
     def query():
         q=input("Enter the contract in which you want query: ")
         if q not in contacts:
